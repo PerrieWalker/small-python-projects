@@ -11,7 +11,7 @@ import sqlite3
 import eyed3
 import shutil
 
-# THE UI WAS DESIGNED ON MAN. WILL LOOK DIFFERENT ON WINDOWS
+# THE UI WAS DESIGNED ON MAC. WILL LOOK DIFFERENT ON WINDOWS
 
 class Mp3_App_Organiser():
     """Uses Mp3 Meta data to organise Mp3's into folders sorted by Artist and Album,
