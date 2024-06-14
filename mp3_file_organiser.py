@@ -13,6 +13,10 @@ import shutil
 
 
 class Mp3_App_Organiser():
+    """Uses Mp3 Meta data to organise Mp3's into folders sorted by Artist and Album,
+     will organise files into folders in the source folder unless a new target location is selected.
+      When the Organise button is pressed a top level window displays a table showing Mp3 Meta Data,
+       the original file location, and where it has been moved to."""
     def __init__(self):
         super().__init__()
         # THEME
@@ -36,10 +40,10 @@ class Mp3_App_Organiser():
         self.target_directory_name = None
 
         # BUTTONS
-        self.button_1 = ttkb.Button(self.frame, text="MOVE FROM", width=10, bootstyle=PRIMARY,
+        self.button_1 = ttkb.Button(self.frame, text="Select Folder", width=10, bootstyle=PRIMARY,
                                     command=self.select_source_directory_name)
         self.button_1.grid(row=1, column=0, padx=10, pady=10)
-        self.button_2 = ttkb.Button(self.frame, text="MOVE TO", width=10, bootstyle=PRIMARY,
+        self.button_2 = ttkb.Button(self.frame, text="Move to", width=10, bootstyle=PRIMARY,
                                     command=self.select_target_directory)
         self.button_2.grid(row=1, column=1, padx=10, pady=10)
         self.button_3 = ttkb.Button(self.frame, text="ORGANISE", width=10, bootstyle=SUCCESS, command=self.organise)
